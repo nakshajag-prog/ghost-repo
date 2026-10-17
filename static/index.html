@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Sleuth: Code Forensics Unit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="crt-overlay"></div>
+  <div class="radar-sweep-line"></div>
+
+  <header class="sleuth-header">
+    <div class="badge-group">
+      <div class="badge-icon">🕵️‍♂️</div>
+      <div class="badge-text">
+        <h1>CYBER FORENSICS</h1>
+        <p>Vulnerability Investigation Unit</p>
+      </div>
+    </div>
+    <div class="agent-hud">
+      <div class="agent-profile">
+        <span class="avatar">👨‍💻</span>
+        <div>
+          <div class="agent-name">Agent_DevX <span class="clearance">CHIEF SLEUTH</span></div>
+          <div class="bounty-wallet">Wallet: <span id="agent-points" class="points-glow">4850 CP</span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="dashboard-layout">
+    <section class="panel-column sidebar-left">
+      <div class="investigation-card dossier-box">
+        <h2 class="panel-title">📁 Case Files & Dossier</h2>
+        <div class="case-input-group">
+          <input type="text" id="repo-url" class="cyber-input" placeholder="Paste compromised repository URL here...">
+          <button id="scan-btn" class="cyber-btn scan-pulse">🔍 Scan Repository</button>
+        </div>
+        <div id="dossier-details" class="dossier-content default-blur">
+          <div class="evidence-photo-wrapper">
+            <img id="evidence-img" src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=300&q=80" alt="Cyber Crime Scene" class="evidence-photo">
+            <div class="photo-overlay">SUSPECT EVIDENCE</div>
+          </div>
+          <div class="dossier-meta">
+            <p><strong>Incident ID:</strong> <span id="case-id" class="text-highlight">#CASE-PENDING</span></p>
+            <p><strong>Target File:</strong> <span id="case-file" class="text-file">None Locked</span></p>
+            <p><strong>Risk Language:</strong> <span id="case-lang" class="badge-risk">UNKNOWN</span></p>
+            <p><strong>Threat Level:</strong> <span id="case-threat" class="threat-level">CRITICAL</span></p>
+          </div>
+          <div class="dossier-summary">
+            <h3>Forensic Briefing:</h3>
+            <p id="case-summary">Awaiting remote codebase stream ingestion... Paste suspect URL above to execute localized analysis protocols.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="investigation-card pipeline-box">
+        <h2 class="panel-title">⛓️ Investigation Pipeline</h2>
+        <ul id="pipeline" class="pipeline-list">
+          <li class="step active" data-step="1"><span>1. Ingest Codebase Link</span></li>
+          <li class="step" data-step="2"><span>2. AI Vulnerability Scan</span></li>
+          <li class="step" data-step="3"><span>3. Debug Vulnerable Blocks</span></li>
+          <li class="step" data-step="4"><span>4. Verify System Resolution</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="panel-column center-lab">
+      <div id="ai-report-panel" class="investigation-card report-box hidden">
+        <div class="report-header">
+          <span class="bot-icon">🤖</span>
+          <h3>AI Forensic Diagnostics Lab</h3>
+        </div>
+        <div id="report-content" class="report-body"></div>
+      </div>
+
+      <div class="investigation-card editor-box">
+        <div class="editor-header">
+          <div class="window-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <span class="editor-filename" id="editor-tab-name">sandbox_workspace.py</span>
+          <span class="editor-status status-clean" id="editor-status">READ-ONLY</span>
+        </div>
+        <div class="editor-container">
+          <textarea id="code-editor" class="code-textarea" spellcheck="false" disabled></textarea>
+        </div>
+        <div class="editor-footer">
+          <div id="suggestion-alert" class="suggestion-banner hidden"></div>
+          <button id="submit-patch-btn" class="cyber-btn primary-action" disabled>🛠️ Deploy Forensic Patch</button>
+        </div>
+      </div>
+
+      <div class="investigation-card terminal-box">
+        <h2 class="panel-title">📟 Forensic Command Terminal</h2>
+        <div id="terminal" class="terminal-output">
+          <div class="term-row sys">[SYSTEM INITIALIZED] Standing by for input URL vectors...</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel-column sidebar-right">
+      <div class="investigation-card leaderboard-box">
+        <h2 class="panel-title">🏆 Global Sleuth Leaderboard</h2>
+        <div class="leaderboard-header">
+          <span>Agent Alias</span>
+          <span>Bounty Score</span>
+        </div>
+        <div id="leaderboard" class="leaderboard-list">
+          <div class="leaderboard-row gold-tier">
+            <span class="rank-name">🥇 ByteSmasher_42</span>
+            <span class="rank-score">9,420 CP</span>
+          </div>
+          <div class="leaderboard-row silver-tier">
+            <span class="rank-name">🥈 CodeCracker_Neon</span>
+            <span class="rank-score">8,110 CP</span>
+          </div>
+          <div class="leaderboard-row bronze-tier">
+            <span class="rank-name">🥉 NullPointer_Sleuth</span>
+            <span class="rank-score">7,950 CP</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="investigation-card toolkit-box">
+        <h2 class="panel-title">🛠️ Sleuth Toolkit Briefing</h2>
+        <div class="toolkit-tip">
+          <h4>💡 Investigation Tip:</h4>
+          <p>Carefully analyze zero constraints or boundary thresholds inside incoming payloads. Modifying variables without safeguarding denominators will trap logic blocks inside runtime loops.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
