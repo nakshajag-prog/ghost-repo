@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 flask>=3.1,<4.0
 huggingface_hub>=0.32.0
 python-dotenv>=1.0.0
 requests>=2.32.0
+=======
+flask>=3.0
+>>>>>>> a29dc896b4095539c02e693fd877b33393dfdbea

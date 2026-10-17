@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+<<<<<<< HEAD
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cyber Sleuth: Code Forensics Unit</title>
   <link rel="stylesheet" href="style.css">
@@ -136,5 +137,112 @@
   </main>
 
   <script src="app.js"></script>
+=======
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GHOST REPO — Every Bug Leaves a Trace</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="scanlines"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">👻</span>
+      <div>
+        <h1>GHOST<span class="accent-v"> REPO</span></h1>
+        <p class="tagline">Every bug leaves a trace</p>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <span class="pill pill-live"><i class="dot"></i> SYSTEM ONLINE</span>
+    </div>
+  </header>
+
+  <main class="layout">
+    <!-- LEFT: case file + pipeline -->
+    <aside class="sidebar">
+      <section class="card case-card">
+        <div class="card-label">CASE FILE</div>
+        <div class="case-id" id="case-id">GR-····</div>
+        <h2 id="case-title">Loading case…</h2>
+        <p class="muted" id="case-summary"></p>
+        <div class="case-meta">
+          <div><span class="muted" id="lang-label">Language</span><strong id="case-lang">—</strong></div>
+          <div><span class="muted">Status</span><strong class="status-unsolved" id="case-status">UNSOLVED</strong></div>
+          <div id="branch-cell" hidden><span class="muted">Branch</span><strong id="case-branch">—</strong></div>
+          <div id="files-cell" hidden><span class="muted">Files read</span><strong id="case-files">0</strong></div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-label">CONNECT A REPOSITORY</div>
+        <label class="field-label" for="repo-url">Public GitHub URL</label>
+        <input class="input" id="repo-url" type="url" spellcheck="false" autocomplete="off"
+               placeholder="https://github.com/OWNER/REPOSITORY">
+        <div class="row">
+          <button class="btn btn-violet btn-small" id="connect-btn" type="button">Connect</button>
+          <button class="btn btn-small" id="sample-btn" type="button">Use sample case</button>
+        </div>
+        <div class="loading" id="connect-loading" hidden><i class="spinner"></i><span>Reading repository from GitHub…</span></div>
+        <div class="error-box" id="connect-error" hidden></div>
+        <p class="hint muted">Public repositories only. No password or token needed. Small Python projects work best.</p>
+      </section>
+
+      <section class="card">
+        <div class="card-label">FILES</div>
+        <ul class="filelist" id="filelist"></ul>
+      </section>
+
+      <section class="card">
+        <div class="card-label">INVESTIGATION PIPELINE</div>
+        <ol class="pipeline" id="pipeline"></ol>
+      </section>
+    </aside>
+
+    <!-- CENTER: code viewer -->
+    <section class="card code-card">
+      <div class="card-label">EVIDENCE: SOURCE CODE</div>
+      <div class="file-path" id="file-path">—</div>
+      <div class="file-role muted" id="file-role"></div>
+      <pre class="code" id="code"><code>Loading…</code></pre>
+      <div class="error-box" id="error-box" hidden></div>
+      <details class="skipped" id="skipped" hidden>
+        <summary id="skipped-summary"></summary>
+        <ul id="skipped-list"></ul>
+        <p class="muted" id="skipped-note"></p>
+      </details>
+    </section>
+
+    <!-- RIGHT: actions + evidence board -->
+    <aside class="sidebar">
+      <section class="card">
+        <div class="card-label">ACTIONS</div>
+        <button class="btn" disabled>▶ Run Test <small>Unlocks in Step 2</small></button>
+        <button class="btn btn-violet" disabled>🔍 Investigate with AI <small>Unlocks in Step 3</small></button>
+        <button class="btn" disabled>🛠 Review Patch <small>Unlocks in Step 4</small></button>
+        <button class="btn btn-green" disabled>✔ Verify Fix <small>Unlocks in Step 5</small></button>
+      </section>
+
+      <section class="card">
+        <div class="card-label">TEST RESULT</div>
+        <div class="empty">
+          <span class="status-badge">NOT RUN YET</span>
+          <p class="muted">No test has been run. Nothing is claimed until a real test runs.</p>
+        </div>
+      </section>
+
+      <section class="card evidence">
+        <div class="card-label">EVIDENCE BOARD</div>
+        <div class="evidence-slot"><b>Suspected bug</b><span class="muted">Awaiting investigation</span></div>
+        <div class="evidence-slot"><b>Supporting code</b><span class="muted">Awaiting investigation</span></div>
+        <div class="evidence-slot"><b>Explanation</b><span class="muted">Awaiting investigation</span></div>
+        <div class="evidence-slot"><b>Suggested patch</b><span class="muted">Awaiting investigation</span></div>
+      </section>
+    </aside>
+  </main>
+
+  <footer class="footer muted">GHOST REPO · hackathon build · Phase 2: sample case + public GitHub repository reader</footer>
+  <script src="/static/app.js"></script>
+>>>>>>> a29dc896b4095539c02e693fd877b33393dfdbea
 </body>
 </html>
