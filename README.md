@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # GHOST REPO — Every Bug Leaves a Trace
 
 A software-detective web app. It examines Python projects, and in later phases runs
@@ -39,3 +40,7 @@ the AI detective, patch review, verification and XP are **not built yet**.
 
 ## License / model terms
 To be completed (MIT license planned; model terms once the AI model is chosen).
+=======
+# ghost-repo
+Turn real software repositories into AI-powered mysteries. Investigate code, uncover bugs, follow evidence, and verify fixes.
+>>>>>>> origin/main
