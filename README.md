@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # GHOST REPO — Every Bug Leaves a Trace
 
 A software-detective web app. It examines Python projects, and in later phases runs
